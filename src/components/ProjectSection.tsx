@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Github, ExternalLink, X } from 'lucide-react';
 import Project1 from '@/assets/project1.png'
 import Project2 from '@/assets/project2.png'
+import Project3 from '@/assets/project3.png'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -53,6 +54,22 @@ const projects: Project[] = [
       "Admin dashboard for inventory management"
     ]
   },
+  {
+    id: 3,
+    title: "Personal Portfolio",
+    description: "A personal portfolio website showcasing projects, skills, and contact information.",
+    image: Project3,
+    techStack: ["React", "Tailwind CSS", "GSAP", "TypeScript", "Vite"],
+    liveLink: "#",
+    codeLink: "",
+    detailedDescription: "A modern and responsive portfolio website built with React and styled using Tailwind CSS. It features smooth animations powered by GSAP, a clean design, and is fully responsive across devices. The site includes sections for projects, skills, and contact information, making it an effective tool for personal branding.",
+    features: [
+      "Responsive design",
+      "Smooth animations with GSAP",
+      "Project showcase with modals",
+    ]
+  },
+
 ];
 
 export default function ProjectSection() {

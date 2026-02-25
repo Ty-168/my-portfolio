@@ -61,7 +61,7 @@ const projects: Project[] = [
     image: Project3,
     techStack: ["React", "Tailwind CSS", "GSAP", "TypeScript", "Vite"],
     liveLink: "#",
-    codeLink: "",
+    codeLink: "https://github.com/Ty-168/my-portfolio",
     detailedDescription: "A modern and responsive portfolio website built with React and styled using Tailwind CSS. It features smooth animations powered by GSAP, a clean design, and is fully responsive across devices. The site includes sections for projects, skills, and contact information, making it an effective tool for personal branding.",
     features: [
       "Responsive design",

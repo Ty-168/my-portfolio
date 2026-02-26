@@ -1,6 +1,6 @@
 
 import { cn } from '@/lib/utils';
-import { Github, Twitter, Linkedin, Facebook } from 'lucide-react';
+import { Github, Linkedin, Facebook } from 'lucide-react';
 import Logo from '@/assets/logo-name.png'
 
 

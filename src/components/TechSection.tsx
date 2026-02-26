@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { SiReact, SiTypescript, SiTailwindcss, SiHtml5, SiCss3, SiJavascript, SiVuedotjs, SiNestjs, SiBootstrap, SiSpringboot, SiGit, SiGithub } from 'react-icons/si';
 import { LogoLoop } from './LogoLoop';
 import gsap from 'gsap';

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Github, Twitter, Linkedin, Menu, X, Facebook } from 'lucide-react';
+import { Github, Linkedin, Menu, X, Facebook } from 'lucide-react';
 import Logo from '@/assets/logo-name.png';
 import { cn } from "@/lib/utils";
 

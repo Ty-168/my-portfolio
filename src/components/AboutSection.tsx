@@ -8,7 +8,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import MyCV from '@/assets/Kity-CV.pdf'
+import MyCV from '@/assets/Lim-kity-CV.pdf'
 
 
 gsap.registerPlugin(ScrollTrigger);

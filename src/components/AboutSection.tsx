@@ -8,7 +8,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import MyCV from '@/assets/Lim-kity-CV.pdf'
+import MyCV from '@/assets/Kity-CV.pdf'
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -190,6 +190,12 @@ export default function AboutSection() {
                                     <ul className="list-disc list-inside space-y-2 text-secondary/80 text-lg ml-2">
                                         <li>Position: Member - Entertainment and Stage Team</li>
                                         <li>Position: Assistance - Performance Team</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold text-secondary mb-2">Nokor Sangkran</h3>
+                                    <ul className="list-disc list-inside space-y-2 text-secondary/80 text-lg ml-2">
+                                        <li>Position: Member - Entertainment Team</li>
                                     </ul>
                                 </div>
                             </div>

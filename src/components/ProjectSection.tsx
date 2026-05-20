@@ -3,6 +3,7 @@ import { Github, ExternalLink, X } from 'lucide-react';
 import Project1 from '@/assets/project1.png'
 import Project2 from '@/assets/project2.png'
 import Project3 from '@/assets/project3.png'
+import Project4 from '@/assets/project4.png'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -18,7 +19,8 @@ interface Project {
   liveLink: string;
   codeLink: string;
   detailedDescription?: string;
-  features?: string[];
+  responsibilities?: string[];
+  badge?: string
 }
 
 const projects: Project[] = [
@@ -31,44 +33,63 @@ const projects: Project[] = [
     liveLink: "https://smartbin.gic26.tech/",
     codeLink: "https://github.com/SmartBin-Project",
     detailedDescription: "This project addresses the inefficiency of traditional waste collection methods. By utilizing IoT sensors (ESP32) in bins, we can monitor fill levels in real-time. The data is transmitted via MQTT to a NestJS backend and visualized on a Vue.js dashboard. This allows for optimized route planning for waste collection trucks, reducing fuel consumption and operational costs.",
-    features: [
-      "Real-time bin status monitoring",
-      "Route optimization for collectors",
-      "Alerts for full bins",
-      "Historical data analysis"
-    ]
+    responsibilities: [
+      "Design UX/UI for Web Application",
+      "Implement real-time data using Websocket in NestJS",
+      "Integrated MQTT (HiveMQ) for communication between ESP32 devices and backend server"
+    ],
+    badge: "Team Project"
   },
   {
     id: 2,
     title: "School Supply E-Commerce",
     description: "A full-stack e-commerce web application for purchasing school supplies online.",
     image: Project2,
-    techStack: ["Vue.js", "Tailwind CSS", "Spring Boot", "MongoDB", "JWT", "Git", "Figma"],
+    techStack: ["Vue.js", "Tailwind CSS", "Spring Boot", "MongoDB"],
     liveLink: "#",
     codeLink: "https://github.com/E-Commerce-School-Supply",
     detailedDescription: "A comprehensive e-commerce platform catered to students and parents. It features a responsive design, secure authentication using JWT, and a robust product management system. The backend is built with Spring Boot for scalability, while MongoDB handles the flexible product data structures.",
-    features: [
-      "User authentication and authorization",
-      "Product search and filtering",
-      "Shopping cart and checkout process",
-      "Admin dashboard for inventory management"
-    ]
+    responsibilities: [
+      "Designed and developed the user interface",
+      "Integrated frontend with RESTful APIs",
+      "Implemented backend features and functionalities",
+    ],
+    badge: "Team Project"
   },
   {
     id: 3,
-    title: "Personal Portfolio",
-    description: "A personal portfolio website showcasing projects, skills, and contact information.",
+    title: "GIC PAMS",
+    description: "A web application that serves as a platform for managing and showcasing projects and skills",
     image: Project3,
-    techStack: ["React", "Tailwind CSS", "GSAP", "TypeScript", "Vite"],
+    techStack: ["Vuejs", "Tailwind CSS", "NestJs", "TypeScript", "MongoDB"],
     liveLink: "#",
-    codeLink: "https://github.com/Ty-168/my-portfolio",
-    detailedDescription: "A modern and responsive portfolio website built with React and styled using Tailwind CSS. It features smooth animations powered by GSAP, a clean design, and is fully responsive across devices. The site includes sections for projects, skills, and contact information, making it an effective tool for personal branding.",
-    features: [
-      "Responsive design",
-      "Smooth animations with GSAP",
-      "Project showcase with modals",
-    ]
+    codeLink: "https://github.com/GIC-ITC",
+    detailedDescription: "GIC PAMS (Project Archive Management System) is a web application designed to help users manage and showcase their projects and skills effectively. The platform allows users to create detailed profiles, add projects with descriptions, tech stacks, and links, and display their skills in an organized manner. It serves as a personal portfolio for developers to highlight their work and expertise.",
+    responsibilities: [
+      "Design UX/UI for the System",
+      "Consume REST APIs using Axios",
+      "Manage application state using Pinia",
+      "Implement responsive design for mobile and desktop",
+      "Develop reusable Vue components"
+    ],
+    badge: "Team Project"
   },
+  {
+    id: 4,
+    title: "Student Part-Time Job Portal",
+    description: "A web application connecting students with part-time job opportunities.",
+    image: Project4,
+    techStack: ["Vue.js", "Tailwind CSS", "NestJS", "PostgresDB"],
+    liveLink: "https://find-job.gic26.tech/",
+    codeLink: "https://github.com/Ty-168/Frontend_IP2",
+    detailedDescription: "A web application designed to connect students with part-time job opportunities. The platform features a user-friendly interface for job seekers to browse and apply for positions, while employers can post job listings and manage applications.",
+    responsibilities: [
+      "Worked on both frontend and backend development",
+      "Deployed the frontend application using Cloudflare",
+      "Hosted and maintained the backend server",
+    ],
+    badge: "Team Project"
+  }
 
 ];
 
@@ -141,7 +162,7 @@ export default function ProjectSection() {
         <div 
                 className="text-center mb-16 project-header">
           <h2 className="text-4xl md:text-5xl font-bold text-secondary tracking-tight text-center">Projects</h2>
-          <p className="text-xl md:text-2xl text-accent text-center font-medium">Things I've built so far</p>
+          <p className="text-xl md:text-2xl text-accent text-center font-medium">Projects I’ve contributed to</p>
         </div>
 
         <div className="project-content grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -246,12 +267,12 @@ export default function ProjectSection() {
                     <p>{selectedProject.detailedDescription || selectedProject.description}</p>
                   </div>
 
-                  {selectedProject.features && (
+                  {selectedProject.responsibilities && (
                     <div>
-                      <h4 className="text-lg font-semibold text-slate-800 mb-2">Key Features</h4>
+                      <h4 className="text-lg font-semibold text-slate-800 mb-2">My Responsibilities</h4>
                       <ul className="list-disc list-inside space-y-1">
-                        {selectedProject.features.map((feature, i) => (
-                           <li key={i}>{feature}</li>
+                        {selectedProject.responsibilities.map((resp, i) => (
+                           <li key={i}>{resp}</li>
                         ))}
                       </ul>
                     </div>
